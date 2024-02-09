@@ -1,3 +1,6 @@
+"""lambda takes a number of parameters and an expression combining these parameters,
+ and creates an anonymous function that returns the value of the expression."""
+
 # Example of a lambda function
 multiply = lambda x, y: x * y
 print(multiply(2, 3))  # Output: 6

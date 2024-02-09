@@ -5,7 +5,7 @@ produced for a given input. Well-known functional languages include the ML famil
 . Python are multi-paradigm; you can write programs or libraries that are largely
 1: procedural
 2: object-oriented
-3: functional in all of these languages.
+3: functional 
 
 
 (In a large program, different sections might be written using different approaches; the GUI might be object-oriented while the processing logic is procedural or functional, for example.)
@@ -15,8 +15,6 @@ Functional style discourages functions with side effects that modify internal st
 
  ? Avoiding side effects means not using data structures that get updated as a program runs; every function’s output must only depend on its input
 
-
- Python programs written in functional style usually won’t go to the extreme of avoiding all I/O or all assignments; instead, they’ll provide a functional-appearing interface but will use non-functional features internally. For example, the implementation of a function will still use assignments to local variables, but won’t modify global variables or have other side effects.
 
  Functional programming can be considered the opposite of object-oriented programming. Objects are little capsules containing some internal state along with a collection of method calls that let you modify this state, and programs consist of making the right set of state changes. Functional programming wants to avoid state changes as much as possible and works with data flowing between functions. In Python you might combine the two approaches by writing functions that take and return instances representing objects in your application (e-mail messages, transactions, etc.).
 
@@ -29,15 +27,5 @@ Functional style discourages functions with side effects that modify internal st
 
 4-Ease of debugging and testing: Testing is easier because each function is a potential subject for a unit test. Functions don’t depend on system state that needs to be replicated before running a test
 
-****** Iterators ******
-
-An iterator is an object representing a stream of data; this object returns the data one element at a time. A Python iterator must support a method called __next__() that takes no arguments and always returns the next element of the stream. If there are no more elements in the stream, __next__() must raise the StopIteration exception. Iterators don’t have to be finite, though; it’s perfectly reasonable to write an iterator that produces an infinite stream of data.
 
 
------- LAMBDA EXPRESSION --------
-
- lambda takes a number of parameters and an expression combining these parameters, and creates an anonymous function that returns the value of the expression.
-An alternative is to just use the def statement and define a function in the usual way
-Which alternative is preferable? usual way?
-One reason for my preference is that lambda is quite limited in the functions it can define.
-The result has to be computable as a single expression, which means you can’t have multiway if... elif... else comparisons or try... except statements

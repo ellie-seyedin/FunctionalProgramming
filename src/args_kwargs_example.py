@@ -2,8 +2,7 @@
 # *args and **kwargs are powerful features in Python that allow you to write flexible functions
 # that can accept a varying number of arguments. 
 # They are commonly used in cases where the number of arguments is not known in advance 
-# or when you want to delegate argument handling to another functio
-# *args and **kwargs are special syntax used in function definitions to handle variable numbers of arguments.
+# or when you want to delegate argument handling to another function
 
 def my_function(*args):
     for arg in args:
@@ -18,12 +17,13 @@ my_function(numbers)
 #it collects all the keyword arguments into a dictionary where the keys are the argument n ames and the values are the argument values.
 
 def my_function(**kwargs):
+    results = []
     for key, value in kwargs.items():
-        print(f"{key}: {value}")
+        results.append(f"{key}: {value}")
+    return results
 
-my_function(name='Alice', age=30, city='New York')
-print(my_function)
-
+fun = my_function(name='Alice', age=30, city='New York')
+print(fun)
 
 # Using *args and **kwargs Together
 # *args must appear before **kwargs

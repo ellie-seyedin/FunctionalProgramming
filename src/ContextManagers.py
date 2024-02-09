@@ -44,4 +44,3 @@ with FileHandler('example.txt', 'w') as file:
     file.write('This is an example.')
 
 # At this point, the file is automatically closed, even if an exception occurs
-

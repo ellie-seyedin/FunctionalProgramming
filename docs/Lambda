@@ -7,5 +7,5 @@ Lambda functions are convenient for functional programming, especially when you 
 
 An alternative is to just use the def statement and define a function in the usual way
 Which alternative is preferable? usual way?
-One reason for my preference is that lambda is quite limited in the functions it can define.
+One reason for writer's preference is that lambda is quite limited in the functions it can define.
 The result has to be computable as a single expression, which means you can’t have multiway if... elif... else comparisons or try... except statements

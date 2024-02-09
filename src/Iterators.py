@@ -1,3 +1,10 @@
+"""
+An iterator is an object representing a stream of data; this object returns the data one element at a time.
+ A Python iterator must support a method called __next__() that takes no arguments and always returns the next element of the stream. 
+ If there are no more elements in the stream, __next__() must raise the StopIteration exception. Iterators don’t have to be finite, though; 
+ it’s perfectly reasonable to write an iterator that produces an infinite stream of data.
+"""
+
 L = [1, 2, 3]
 it = iter(L)
 
