@@ -1,7 +1,8 @@
 """Context managers are mainly used to properly manage resources. 
-The most common use of a context manager is the opening of a file: with open('workfile', 'r') as f:
-"""
+The most common use of a context manager is the opening of a file: with open('workfile', 'r') as f:"""
+
 from time import time
+
 
 class Timer():
     def __init__(self, message):
@@ -22,4 +23,25 @@ with Timer("Elapsed time to compute some prime numbers: {}ms"):
         if not any(x % p == 0 for p in primes):
             primes.append(x)
     print("Primes: {}".format(primes))
+
+
+
+
+class FileHandler:
+    def __init__(self, filename, mode):
+        self.filename = filename
+        self.mode = mode
+
+    def __enter__(self):
+        self.file = open(self.filename, self.mode)
+        return self.file
+
+    def __exit__(self, exc_type, exc_value, traceback):
+        self.file.close()
+
+# Usage of the context manager
+with FileHandler('example.txt', 'w') as file:
+    file.write('This is an example.')
+
+# At this point, the file is automatically closed, even if an exception occurs
 
