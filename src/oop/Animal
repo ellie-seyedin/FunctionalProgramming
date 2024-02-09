@@ -1,0 +1,35 @@
+class Animal:
+    def __init__(self, name):
+        self.name = name
+
+    def speak(self):
+        raise NotImplementedError("Subclass must implement abstract method")
+
+class Cat(Animal):
+    def speak(self):
+        return f"{self.name} says meow!"
+
+my_cat = Cat("Whiskers")
+print(my_cat.speak())  # Output: Whiskers says meow!
+
+
+class Dog:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def speak(self):
+        return f"{self.name} says woof!"
+
+# Creating an instance of Dog
+my_dog = Dog("Rex", 5)
+print(my_dog.speak()) 
+
+
+
+# Polymorphism
+def animal_sound(animal):
+    print(animal.speak())
+
+animal_sound(my_dog) 
+animal_sound(my_cat)
