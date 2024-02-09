@@ -31,3 +31,32 @@ for key in month:
 
 L = [('Italy', 'Rome'), ('France', 'Paris'), ('US', 'Washington DC')]
 print(dict(iter(L)))
+
+
+
+"""itertools is a module in the standard library that allows you to create iterators for efficient looping.
+
+For example, permutations allows you to generate all the possible ways of ordering a set of things"""
+
+from itertools import permutations
+
+for p in permutations([1,2,3]):
+    print(p)
+
+
+"""Similarly, combinations generates all the possible ways of selecting items from a collection, 
+such that (unlike permutations) the order does not matter:"""
+
+from itertools import combinations
+
+for c in combinations([1, 2, 3, 4], 2):
+    print(c)
+
+
+"""itertools also contains utility functions such as chain, 
+which takes iterables and creates a new iterator that returns elements from the given iterables sequentially, as a single sequence:
+"""
+from itertools import chain
+
+for c in chain(range(2), range(12, 15)):
+    print(c)
