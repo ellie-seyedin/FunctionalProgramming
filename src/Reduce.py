@@ -8,6 +8,9 @@ numbers = [1, 2, 3, 356, 24, 45, 56, 64]
 sum = reduce(lambda x, y : x + y , numbers)
 print(sum)
 
+multiply = reduce(lambda x, y : x * y, numbers)
+print(multiply) 
+
 concatenation = reduce(operator.concat, ['A', 'BB', 'C'])
 print(concatenation)
 

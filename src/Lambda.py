@@ -27,3 +27,7 @@ def divide(x,y):
 print_assign = lambda name, value: name + '=' + str(value)
 print(print_assign('Uk', 'London'))
 
+my_list = ['apple', 'banana', 'cherry', 'date']
+sorted_list = sorted(my_list, key=lambda x: len(x))
+print(sorted_list) 
+
